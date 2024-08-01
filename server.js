@@ -10,7 +10,7 @@ const app = express();
 const server = https.createServer({
 	key: fs.readFileSync('./certs/key.pem'),
 	cert: fs.readFileSync('./certs/cert.pem'),
-	passphrase: 'your certificate passphrase'
+	passphrase: 'passphrase'
 }, app);
 
 const sio = require('socket.io')({
